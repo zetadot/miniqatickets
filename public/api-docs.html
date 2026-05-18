@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Docs · Mini QA Tickets</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/index.html">Mini QA Tickets</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/index.html">Home</a>
+      <a href="/tickets.html">Tickets</a>
+      <a href="/new-ticket.html">New Ticket</a>
+      <a class="active" href="/api-docs.html">API Docs</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>API documentation</h1>
+    <section class="card">
+      <h2>Base URL</h2>
+      <p><code>http://localhost:3000/api</code></p>
+      <h2>Endpoints</h2>
+      <ul>
+        <li><code>GET /api/health</code></li>
+        <li><code>GET /api/users</code></li>
+        <li><code>GET /api/tickets</code></li>
+        <li><code>GET /api/tickets?status=Open&amp;priority=High&amp;q=login</code></li>
+        <li><code>GET /api/tickets/:id</code></li>
+        <li><code>POST /api/tickets</code></li>
+        <li><code>PATCH /api/tickets/:id</code></li>
+        <li><code>DELETE /api/tickets/:id</code></li>
+      </ul>
+      <h2>Example POST body</h2>
+      <pre>{
+  "title": "New defect from API",
+  "description": "Created with Playwright request context",
+  "priority": "High",
+  "project": "Automation Practice",
+  "assigneeId": 1
+}</pre>
+    </section>
+  </main>
+</body>
+</html>

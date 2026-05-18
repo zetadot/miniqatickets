@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New ticket · Mini QA Tickets</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/index.html">Mini QA Tickets</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="/index.html">Home</a>
+      <a href="/tickets.html">Tickets</a>
+      <a class="active" href="/new-ticket.html">New Ticket</a>
+      <a href="/api-docs.html">API Docs</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Create a ticket</h1>
+    <form id="ticketForm" class="card form-grid" data-testid="new-ticket-form">
+      <label>Title
+        <input id="title" data-testid="title-input" name="title" required placeholder="Example: Checkout button does not work" />
+      </label>
+      <label>Project
+        <input id="project" data-testid="project-input" name="project" required placeholder="Example: Salesforce Portal" />
+      </label>
+      <label>Priority
+        <select id="priority" data-testid="priority-select" name="priority" required>
+          <option value="">Select priority</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </label>
+      <label>Assignee
+        <select id="assigneeId" data-testid="assignee-select" name="assigneeId" required></select>
+      </label>
+      <label class="full">Description
+        <textarea id="description" data-testid="description-input" name="description" required placeholder="Describe the problem"></textarea>
+      </label>
+      <div class="full">
+        <button type="submit" data-testid="submit-ticket">Create ticket</button>
+        <a class="button secondary" href="/tickets.html">Cancel</a>
+      </div>
+      <div id="formMessage" class="message full" data-testid="form-message"></div>
+    </form>
+  </main>
+
+  <script src="/js/new-ticket.js"></script>
+</body>
+</html>

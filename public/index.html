@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini QA Tickets</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/index.html">Mini QA Tickets</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="/index.html">Home</a>
+      <a href="/tickets.html">Tickets</a>
+      <a href="/new-ticket.html">New Ticket</a>
+      <a href="/api-docs.html">API Docs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Practice UI and API automation with Playwright</h1>
+        <p>This mini web app includes navigation, forms, filters, ticket details, static images and a REST API for realistic automation practice.</p>
+        <a class="button" data-testid="go-to-tickets" href="/tickets.html">View tickets</a>
+      </div>
+      <img src="/images/hero.svg" alt="Testing dashboard illustration" />
+    </section>
+
+    <section class="container grid" aria-label="Practice areas">
+      <article class="card">
+        <img class="icon" src="/images/ticket-icon.svg" alt="Ticket icon" />
+        <h3>Functional testing</h3>
+        <p>Automate navigation, filters, detail pages, forms and validation messages.</p>
+      </article>
+      <article class="card">
+        <img class="icon" src="/images/api-icon.svg" alt="API icon" />
+        <h3>API testing</h3>
+        <p>Use Playwright request context to create, update, delete and query tickets.</p>
+      </article>
+      <article class="card">
+        <img class="icon" src="/images/test-icon.svg" alt="Check icon" />
+        <h3>E2E flows</h3>
+        <p>Create data through API, validate it in the UI and clean it after the test.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">Mini QA Tickets · Demo app for automation practice</footer>
+</body>
+</html>

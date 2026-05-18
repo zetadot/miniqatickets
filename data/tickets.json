@@ -1,0 +1,52 @@
+[
+  {
+    "id": 101,
+    "title": "Login fails with invalid error message",
+    "description": "When the user enters an invalid password, the page displays a generic server error instead of a validation message.",
+    "status": "Open",
+    "priority": "High",
+    "project": "Salesforce Portal",
+    "assigneeId": 1,
+    "createdAt": "2026-05-12"
+  },
+  {
+    "id": 102,
+    "title": "Cart total is not updated after removing product",
+    "description": "The cart total remains unchanged after a product is removed from the basket.",
+    "status": "In Progress",
+    "priority": "Medium",
+    "project": "Ecommerce Demo",
+    "assigneeId": 2,
+    "createdAt": "2026-05-13"
+  },
+  {
+    "id": 103,
+    "title": "Search filter ignores lowercase text",
+    "description": "The ticket search field only works when using uppercase text.",
+    "status": "Closed",
+    "priority": "Low",
+    "project": "QA Dashboard",
+    "assigneeId": 3,
+    "createdAt": "2026-05-14"
+  },
+  {
+    "id": 104,
+    "title": "User details page loads slowly",
+    "description": "The details page takes more than five seconds to render after clicking a user record.",
+    "status": "Open",
+    "priority": "Medium",
+    "project": "Salesforce Portal",
+    "assigneeId": 2,
+    "createdAt": "2026-05-16"
+  },
+  {
+    "id": 105,
+    "title": "pepito",
+    "description": "testtest",
+    "status": "Open",
+    "priority": "High",
+    "project": "test",
+    "assigneeId": 2,
+    "createdAt": "2026-05-18"
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Ana Torres", "role": "QA Analyst", "avatar": "/images/avatar-ana.svg" },
+  { "id": 2, "name": "David Romero", "role": "Developer", "avatar": "/images/avatar-david.svg" },
+  { "id": 3, "name": "Laura Vidal", "role": "Product Owner", "avatar": "/images/avatar-laura.svg" }
+]
