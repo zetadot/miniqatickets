@@ -3,6 +3,7 @@ const searchInput = document.querySelector('#searchInput');
 const statusFilter = document.querySelector('#statusFilter');
 const priorityFilter = document.querySelector('#priorityFilter');
 const clearFilters = document.querySelector('#clearFilters');
+const ticketFeedback = document.querySelector('#ticketFeedback');
 
 function priorityClass(priority) {
   return priority.toLowerCase();
@@ -25,9 +26,30 @@ function renderTickets(tickets) {
           <span class="badge ${priorityClass(ticket.priority)}" data-testid="ticket-priority">${ticket.priority}</span>
         </div>
       </div>
-      <a class="button secondary" data-testid="view-ticket-${ticket.id}" href="/ticket-detail.html?id=${ticket.id}">View</a>
+      <div class="ticket-actions">
+        <a class="button secondary" data-testid="view-ticket-${ticket.id}" href="/ticket-detail.html?id=${ticket.id}">View</a>
+        <button class="button danger delete-ticket-button" type="button" data-testid="delete-ticket-${ticket.id}" data-ticket-id="${ticket.id}">Delete</button>
+      </div>
     </article>
   `).join('');
+}
+
+
+function showTicketFeedback(message, type = 'success') {
+  ticketFeedback.textContent = message;
+  ticketFeedback.className = `message ${type}`;
+}
+
+async function deleteTicket(ticketId) {
+  const response = await fetch(`/api/tickets/${ticketId}`, { method: 'DELETE' });
+
+  if (!response.ok) {
+    showTicketFeedback('The ticket could not be deleted.', 'error');
+    return;
+  }
+
+  showTicketFeedback(`Ticket ${ticketId} deleted successfully.`);
+  await loadTickets();
 }
 
 async function loadTickets() {
@@ -44,6 +66,13 @@ async function loadTickets() {
 [searchInput, statusFilter, priorityFilter].forEach(element => {
   element.addEventListener('input', loadTickets);
   element.addEventListener('change', loadTickets);
+});
+
+ticketList.addEventListener('click', async event => {
+  const deleteButton = event.target.closest('.delete-ticket-button');
+  if (!deleteButton) return;
+
+  await deleteTicket(deleteButton.dataset.ticketId);
 });
 
 clearFilters.addEventListener('click', () => {

@@ -38,15 +38,5 @@
     "project": "Salesforce Portal",
     "assigneeId": 2,
     "createdAt": "2026-05-16"
-  },
-  {
-    "id": 105,
-    "title": "pepito",
-    "description": "testtest",
-    "status": "Open",
-    "priority": "High",
-    "project": "test",
-    "assigneeId": 2,
-    "createdAt": "2026-05-18"
   }
 ]

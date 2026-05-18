@@ -91,9 +91,12 @@ button, .button {
 }
 button:hover, .button:hover { background: var(--primary-dark); }
 .button.secondary { background: #e8eefc; color: var(--primary); }
+.button.danger { background: #fde8e8; color: var(--danger); }
+.button.danger:hover { background: #fbd5d5; }
 
 .ticket-list { display: grid; gap: 14px; }
 .ticket-card { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
+.ticket-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
 .ticket-card h3 { margin: 0 0 8px; }
 .ticket-meta { color: var(--muted); font-size: 14px; }
 .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
